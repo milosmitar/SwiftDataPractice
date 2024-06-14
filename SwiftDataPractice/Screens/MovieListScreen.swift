@@ -18,9 +18,7 @@ struct MovieListScreen: View {
 //    @Environment(\.modelContext) private var context
     var body: some View {
 //        VStack{
-            List(movies) { movie in
-                Text(movie.title)
-            }
+           MoviListView(movies: movies)
 //        }
         .toolbar{
             ToolbarItem(placement: .topBarTrailing) {
