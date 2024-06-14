@@ -7,7 +7,7 @@
 
 import SwiftUI
 import SwiftData
-
+/// Na edit sheme u argument-u upisujemo -com.apple.CoreData.SQLDebug 1 da bi videli query-je u log-u
 //umesto ovog sranja sa modelContex-om i task-om koristimo Query !!!
 
 struct MovieListScreen: View {
