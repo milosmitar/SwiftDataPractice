@@ -13,6 +13,7 @@ struct MovieDetailScreen: View {
     let movie: Movie
     @State private var title: String = ""
     @State private var year: Int?
+    @State private var showReviewScreen: Bool = false
     var body: some View {
         Form{
             TextField("Title", text: $title)
@@ -29,11 +30,37 @@ struct MovieDetailScreen: View {
                     print(error.localizedDescription)
                 }
             }.buttonStyle(.borderless)
+            
+            Section("Reviews"){
+                Button(action: {
+                    showReviewScreen = true
+                }, label: {
+                    Image(systemName: "plus")
+                        .frame(maxWidth:.infinity, alignment: .trailing)
+                })
+                
+                if let reviews = movie.reviews{
+                    if reviews.isEmpty {
+                        ContentUnavailableView{
+                            Text("No reviews")
+                        }
+                    }else{
+                        ReviewListView(reviews: reviews)
+                    }
+                }
+                
+                
+            }
         }
         .onAppear(){
             title = movie.title
             year = movie.year
         }
+        .sheet(isPresented: $showReviewScreen, content: {
+            NavigationStack{
+                AddReviewScreen(movie: movie)
+            }
+        })
     }
 }
 

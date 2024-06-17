@@ -10,6 +10,9 @@
 		450DB6E02C1C6CCB00C31DCF /* MovieListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450DB6DF2C1C6CCB00C31DCF /* MovieListScreen.swift */; };
 		450DB6E32C1C887D00C31DCF /* MoviListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450DB6E22C1C887D00C31DCF /* MoviListView.swift */; };
 		450DB6E52C1C8C5D00C31DCF /* MovieDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450DB6E42C1C8C5D00C31DCF /* MovieDetailScreen.swift */; };
+		4559D27D2C20517100BC109A /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4559D27C2C20517100BC109A /* Review.swift */; };
+		4559D27F2C20660800BC109A /* AddReviewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4559D27E2C20660800BC109A /* AddReviewScreen.swift */; };
+		4559D2812C20775300BC109A /* ReviewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4559D2802C20775300BC109A /* ReviewListView.swift */; };
 		458027B82C1C5CAB0072AAA1 /* SwiftDataPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458027B72C1C5CAB0072AAA1 /* SwiftDataPracticeApp.swift */; };
 		458027BA2C1C5CAB0072AAA1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458027B92C1C5CAB0072AAA1 /* ContentView.swift */; };
 		458027BC2C1C5CAB0072AAA1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458027BB2C1C5CAB0072AAA1 /* Item.swift */; };
@@ -24,6 +27,9 @@
 		450DB6DF2C1C6CCB00C31DCF /* MovieListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListScreen.swift; sourceTree = "<group>"; };
 		450DB6E22C1C887D00C31DCF /* MoviListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviListView.swift; sourceTree = "<group>"; };
 		450DB6E42C1C8C5D00C31DCF /* MovieDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailScreen.swift; sourceTree = "<group>"; };
+		4559D27C2C20517100BC109A /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		4559D27E2C20660800BC109A /* AddReviewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewScreen.swift; sourceTree = "<group>"; };
+		4559D2802C20775300BC109A /* ReviewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListView.swift; sourceTree = "<group>"; };
 		458027B42C1C5CAB0072AAA1 /* SwiftDataPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDataPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		458027B72C1C5CAB0072AAA1 /* SwiftDataPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataPracticeApp.swift; sourceTree = "<group>"; };
 		458027B92C1C5CAB0072AAA1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				450DB6E22C1C887D00C31DCF /* MoviListView.swift */,
+				4559D2802C20775300BC109A /* ReviewListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -98,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				458027C82C1C605F0072AAA1 /* Movie.swift */,
+				4559D27C2C20517100BC109A /* Review.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -108,6 +116,7 @@
 				458027CB2C1C61400072AAA1 /* AddMovieScreen.swift */,
 				450DB6DF2C1C6CCB00C31DCF /* MovieListScreen.swift */,
 				450DB6E42C1C8C5D00C31DCF /* MovieDetailScreen.swift */,
+				4559D27E2C20660800BC109A /* AddReviewScreen.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -194,8 +203,11 @@
 				458027BA2C1C5CAB0072AAA1 /* ContentView.swift in Sources */,
 				458027BC2C1C5CAB0072AAA1 /* Item.swift in Sources */,
 				450DB6E52C1C8C5D00C31DCF /* MovieDetailScreen.swift in Sources */,
+				4559D2812C20775300BC109A /* ReviewListView.swift in Sources */,
 				458027CC2C1C61400072AAA1 /* AddMovieScreen.swift in Sources */,
+				4559D27D2C20517100BC109A /* Review.swift in Sources */,
 				458027C92C1C60600072AAA1 /* Movie.swift in Sources */,
+				4559D27F2C20660800BC109A /* AddReviewScreen.swift in Sources */,
 				458027CF2C1C62190072AAA1 /* String+Extensions.swift in Sources */,
 				458027B82C1C5CAB0072AAA1 /* SwiftDataPracticeApp.swift in Sources */,
 				450DB6E32C1C887D00C31DCF /* MoviListView.swift in Sources */,
@@ -340,6 +352,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -373,6 +386,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
