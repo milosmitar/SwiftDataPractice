@@ -39,16 +39,13 @@ struct MovieDetailScreen: View {
                         .frame(maxWidth:.infinity, alignment: .trailing)
                 })
                 
-                if let reviews = movie.reviews{
-                    if reviews.isEmpty {
-                        ContentUnavailableView{
-                            Text("No reviews")
-                        }
-                    }else{
-                        ReviewListView(reviews: reviews)
+                if movie.reviews.isEmpty{
+                    ContentUnavailableView{
+                        Text("No reviews")
                     }
+                }else{
+                    ReviewListView(movie: movie)
                 }
-                
                 
             }
         }
