@@ -12,15 +12,35 @@ import SwiftData
 
 struct MovieListScreen: View {
 //    @State var list: [Movie] = []
+    @Environment(\.modelContext) private var context
+    @Environment(\.dismiss) private var dismiss
     @State private var isAddMoviePresented: Bool = false
+    @State private var isActorPresented: Bool = false
+    @State private var actorName: String = ""
     // gave me all
-    @Query(sort: \Movie.title, order: .forward) private var movies: [Movie]
-//    @Environment(\.modelContext) private var context
+    @Query(sort: \Movie.title, order: .forward)
+    private var movies: [Movie]
+    
+    @Query(sort: \Actor.name, order: .forward)
+    private var actors: [Actor]
+    //    @Environment(\.modelContext) private var context
     var body: some View {
-//        VStack{
-           MoviListView(movies: movies)
-//        }
+        VStack(alignment: .leading){
+            Text("Movies")
+                .font(.largeTitle)
+            MoviListView(movies: movies)
+            
+            Text("Actors")
+                .font(.largeTitle)
+            ActorListView(actors: actors)
+        }
+        .padding()
         .toolbar{
+            ToolbarItem( placement: .topBarLeading) {
+                Button("Add Actor"){
+                    isActorPresented = true
+                }
+            }
             ToolbarItem(placement: .topBarTrailing) {
                 Button("Add Movie"){
                     isAddMoviePresented = true
@@ -33,9 +53,23 @@ struct MovieListScreen: View {
                 AddMovieScreen()
             }
         })
-//        .task {
-//            
-//            do {
+        .sheet(isPresented: $isActorPresented, content: {
+            //            NavigationStack{
+            Text("Add Actor")
+            TextField("Actor name", text: $actorName)
+                .textFieldStyle(.roundedBorder)
+                .presentationDetents([.fraction(0.25)])
+                .padding()
+            Button("Save"){
+                isActorPresented = true
+                saveActor()
+                
+            }
+            //            }
+        })
+        //        .task {
+        //
+        //            do {
 //                let fetchDescriptor = FetchDescriptor<Movie>()
 //                
 //                self.list = try self.context.fetch(fetchDescriptor)
@@ -44,9 +78,16 @@ struct MovieListScreen: View {
 //            }
 //        }
     }
+    private func saveActor(){
+        let actor = Actor(name: actorName)
+        context.insert(actor)
+        isActorPresented = false
+    }
 }
 
 #Preview {
-    MovieListScreen()
-        .modelContainer(for: [Movie.self])
+    NavigationStack{
+        MovieListScreen()
+            .modelContainer(for: [Movie.self, Review.self, Actor.self])
+    }
 }

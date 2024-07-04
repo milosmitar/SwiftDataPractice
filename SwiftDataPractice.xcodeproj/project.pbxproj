@@ -13,6 +13,8 @@
 		4559D27D2C20517100BC109A /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4559D27C2C20517100BC109A /* Review.swift */; };
 		4559D27F2C20660800BC109A /* AddReviewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4559D27E2C20660800BC109A /* AddReviewScreen.swift */; };
 		4559D2812C20775300BC109A /* ReviewListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4559D2802C20775300BC109A /* ReviewListView.swift */; };
+		4559D2832C218CA800BC109A /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4559D2822C218CA800BC109A /* Actor.swift */; };
+		4559D2852C2193D900BC109A /* ActorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4559D2842C2193D900BC109A /* ActorListView.swift */; };
 		458027B82C1C5CAB0072AAA1 /* SwiftDataPracticeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458027B72C1C5CAB0072AAA1 /* SwiftDataPracticeApp.swift */; };
 		458027BA2C1C5CAB0072AAA1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458027B92C1C5CAB0072AAA1 /* ContentView.swift */; };
 		458027BC2C1C5CAB0072AAA1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458027BB2C1C5CAB0072AAA1 /* Item.swift */; };
@@ -21,6 +23,7 @@
 		458027C92C1C60600072AAA1 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458027C82C1C605F0072AAA1 /* Movie.swift */; };
 		458027CC2C1C61400072AAA1 /* AddMovieScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458027CB2C1C61400072AAA1 /* AddMovieScreen.swift */; };
 		458027CF2C1C62190072AAA1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458027CE2C1C62190072AAA1 /* String+Extensions.swift */; };
+		45DA94492C369E41008ACB8E /* ActorSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DA94482C369E41008ACB8E /* ActorSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,8 @@
 		4559D27C2C20517100BC109A /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		4559D27E2C20660800BC109A /* AddReviewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewScreen.swift; sourceTree = "<group>"; };
 		4559D2802C20775300BC109A /* ReviewListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewListView.swift; sourceTree = "<group>"; };
+		4559D2822C218CA800BC109A /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		4559D2842C2193D900BC109A /* ActorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorListView.swift; sourceTree = "<group>"; };
 		458027B42C1C5CAB0072AAA1 /* SwiftDataPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDataPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		458027B72C1C5CAB0072AAA1 /* SwiftDataPracticeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftDataPracticeApp.swift; sourceTree = "<group>"; };
 		458027B92C1C5CAB0072AAA1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -39,6 +44,7 @@
 		458027C82C1C605F0072AAA1 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		458027CB2C1C61400072AAA1 /* AddMovieScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieScreen.swift; sourceTree = "<group>"; };
 		458027CE2C1C62190072AAA1 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		45DA94482C369E41008ACB8E /* ActorSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,8 @@
 			children = (
 				450DB6E22C1C887D00C31DCF /* MoviListView.swift */,
 				4559D2802C20775300BC109A /* ReviewListView.swift */,
+				4559D2842C2193D900BC109A /* ActorListView.swift */,
+				45DA94482C369E41008ACB8E /* ActorSelectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,6 +114,7 @@
 			children = (
 				458027C82C1C605F0072AAA1 /* Movie.swift */,
 				4559D27C2C20517100BC109A /* Review.swift */,
+				4559D2822C218CA800BC109A /* Actor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -203,11 +212,14 @@
 				458027BA2C1C5CAB0072AAA1 /* ContentView.swift in Sources */,
 				458027BC2C1C5CAB0072AAA1 /* Item.swift in Sources */,
 				450DB6E52C1C8C5D00C31DCF /* MovieDetailScreen.swift in Sources */,
+				4559D2832C218CA800BC109A /* Actor.swift in Sources */,
 				4559D2812C20775300BC109A /* ReviewListView.swift in Sources */,
 				458027CC2C1C61400072AAA1 /* AddMovieScreen.swift in Sources */,
 				4559D27D2C20517100BC109A /* Review.swift in Sources */,
 				458027C92C1C60600072AAA1 /* Movie.swift in Sources */,
 				4559D27F2C20660800BC109A /* AddReviewScreen.swift in Sources */,
+				4559D2852C2193D900BC109A /* ActorListView.swift in Sources */,
+				45DA94492C369E41008ACB8E /* ActorSelectionView.swift in Sources */,
 				458027CF2C1C62190072AAA1 /* String+Extensions.swift in Sources */,
 				458027B82C1C5CAB0072AAA1 /* SwiftDataPracticeApp.swift in Sources */,
 				450DB6E32C1C887D00C31DCF /* MoviListView.swift in Sources */,

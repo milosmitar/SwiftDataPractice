@@ -15,11 +15,12 @@ struct AddMovieScreen: View {
     
     @State private var title: String = ""
     @State private var year: Int?
+    @State private var selectedActors: Set<Actor> = []
     
 //    @State private var goToList = false
     
     private var isFormValid: Bool {
-        !title.isEmptyOrWhiteSpace && year != nil
+        !title.isEmptyOrWhiteSpace && year != nil && !selectedActors.isEmpty
     }
     
     var body: some View {
@@ -27,6 +28,10 @@ struct AddMovieScreen: View {
             
             TextField("Title", text: $title)
             TextField("Year", value: $year, format: .number)
+            
+            Section("Select Actors"){
+                ActorSelectionView(selectedActors: $selectedActors)
+            }
         }
 //        .navigationDestination(isPresented: $goToList){
 //            MovieListScreen()
@@ -44,6 +49,13 @@ struct AddMovieScreen: View {
                     guard let year = year else { return }
                     
                     let movie = Movie(title: title, year: year)
+                    movie.actors = Array(selectedActors)
+                    
+                    selectedActors.forEach { actor in
+                        actor.movies.append(movie)
+                        context.insert(actor)
+                    }
+                    
                     context.insert(movie)
                     
                     do {
