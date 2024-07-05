@@ -13,8 +13,13 @@ struct ActorListView: View {
     
     var body: some View {
         List(actors) { actor in
-            Text(actor.name)
+            NavigationLink(value: actor){
+                ActorCellView(actor: actor)
+            }
             
+        }
+        .navigationDestination(for: Actor.self) { actor in
+            ActorDetailScreen(actor: actor)
         }
     }
 }
