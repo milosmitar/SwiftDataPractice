@@ -20,9 +20,7 @@ struct MoviListView: View {
         switch filterOption {
         case .title(let movieTitle):
             _movies = Query(filter: #Predicate<Movie> { movie in
-                
                 movie.title.contains(movieTitle)
-                
             })
         case .none:
             _movies = Query()
@@ -35,8 +33,14 @@ struct MoviListView: View {
         List{
             ForEach(movies){ movie in
                 NavigationLink(value: movie) {
-                    HStack{
-                        Text(movie.title)
+                    HStack(alignment: .firstTextBaseline){
+                        VStack(alignment: .leading){
+                            Text(movie.title)
+                            Text("Number of reviews: \(movie.reviewsCount)")
+                                .font(.caption)
+                            Text("Number of actors: \(movie.actorsCount)")
+                                .font(.caption)
+                        }
                         Spacer()
                         Text(movie.year.description)
                     }
