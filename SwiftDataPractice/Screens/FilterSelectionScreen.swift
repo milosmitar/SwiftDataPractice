@@ -9,6 +9,7 @@ import SwiftUI
 
 enum FilterOption{
     case title(String)
+    case reviewsCount(Int)
     case none
 }
 
@@ -18,6 +19,7 @@ struct FilterSelectionScreen: View {
     @State private var movieTitle: String = ""
     
     @Binding var filterOption: FilterOption
+    @State var numberOfReviews: Int?
     
     var body: some View {
         Form{
@@ -25,6 +27,14 @@ struct FilterSelectionScreen: View {
                 TextField("Movie title",text: $movieTitle)
                 Button("Search"){
                     filterOption = .title(movieTitle)
+                    dismiss()
+                }
+            }
+            Section("Filter by number of reviews"){
+                TextField("Number of reviews",value: $numberOfReviews, format: .number)
+                    .keyboardType(.numberPad)
+                Button("Search"){
+                    filterOption = .reviewsCount(numberOfReviews ?? 1)
                     dismiss()
                 }
             }
