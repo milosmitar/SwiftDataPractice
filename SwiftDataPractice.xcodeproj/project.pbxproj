@@ -24,6 +24,8 @@
 		458027CC2C1C61400072AAA1 /* AddMovieScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458027CB2C1C61400072AAA1 /* AddMovieScreen.swift */; };
 		458027CF2C1C62190072AAA1 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458027CE2C1C62190072AAA1 /* String+Extensions.swift */; };
 		45AFC0F62C38287F00517431 /* FilterSelectionScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AFC0F52C38287F00517431 /* FilterSelectionScreen.swift */; };
+		45C020ED2C3C0D8C00B84649 /* MoviesSchemaVersions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C020EC2C3C0D8C00B84649 /* MoviesSchemaVersions.swift */; };
+		45C020EF2C3C111B00B84649 /* MoviesMigrationPlan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C020EE2C3C111B00B84649 /* MoviesMigrationPlan.swift */; };
 		45DA94492C369E41008ACB8E /* ActorSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DA94482C369E41008ACB8E /* ActorSelectionView.swift */; };
 		45DA944B2C36A728008ACB8E /* ActorCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DA944A2C36A728008ACB8E /* ActorCellView.swift */; };
 		45DA944D2C36B22B008ACB8E /* ActorDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45DA944C2C36B22B008ACB8E /* ActorDetailScreen.swift */; };
@@ -49,6 +51,8 @@
 		458027CB2C1C61400072AAA1 /* AddMovieScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieScreen.swift; sourceTree = "<group>"; };
 		458027CE2C1C62190072AAA1 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		45AFC0F52C38287F00517431 /* FilterSelectionScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSelectionScreen.swift; sourceTree = "<group>"; };
+		45C020EC2C3C0D8C00B84649 /* MoviesSchemaVersions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSchemaVersions.swift; sourceTree = "<group>"; };
+		45C020EE2C3C111B00B84649 /* MoviesMigrationPlan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesMigrationPlan.swift; sourceTree = "<group>"; };
 		45DA94482C369E41008ACB8E /* ActorSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorSelectionView.swift; sourceTree = "<group>"; };
 		45DA944A2C36A728008ACB8E /* ActorCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorCellView.swift; sourceTree = "<group>"; };
 		45DA944C2C36B22B008ACB8E /* ActorDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorDetailScreen.swift; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 		458027B62C1C5CAB0072AAA1 /* SwiftDataPractice */ = {
 			isa = PBXGroup;
 			children = (
+				45C020EB2C3C0D7500B84649 /* Schema Version */,
 				450DB6E12C1C886D00C31DCF /* Views */,
 				458027CD2C1C62060072AAA1 /* Extensions */,
 				458027CA2C1C612C0072AAA1 /* Screens */,
@@ -148,6 +153,15 @@
 				458027CE2C1C62190072AAA1 /* String+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		45C020EB2C3C0D7500B84649 /* Schema Version */ = {
+			isa = PBXGroup;
+			children = (
+				45C020EC2C3C0D8C00B84649 /* MoviesSchemaVersions.swift */,
+				45C020EE2C3C111B00B84649 /* MoviesMigrationPlan.swift */,
+			);
+			path = "Schema Version";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +240,7 @@
 				458027BC2C1C5CAB0072AAA1 /* Item.swift in Sources */,
 				45AFC0F62C38287F00517431 /* FilterSelectionScreen.swift in Sources */,
 				450DB6E52C1C8C5D00C31DCF /* MovieDetailScreen.swift in Sources */,
+				45C020ED2C3C0D8C00B84649 /* MoviesSchemaVersions.swift in Sources */,
 				4559D2832C218CA800BC109A /* Actor.swift in Sources */,
 				45DA944D2C36B22B008ACB8E /* ActorDetailScreen.swift in Sources */,
 				4559D2812C20775300BC109A /* ReviewListView.swift in Sources */,
@@ -236,6 +251,7 @@
 				45DA944F2C36B29C008ACB8E /* MovieSelectionView.swift in Sources */,
 				4559D2852C2193D900BC109A /* ActorListView.swift in Sources */,
 				45DA94492C369E41008ACB8E /* ActorSelectionView.swift in Sources */,
+				45C020EF2C3C111B00B84649 /* MoviesMigrationPlan.swift in Sources */,
 				458027CF2C1C62190072AAA1 /* String+Extensions.swift in Sources */,
 				458027B82C1C5CAB0072AAA1 /* SwiftDataPracticeApp.swift in Sources */,
 				450DB6E32C1C887D00C31DCF /* MoviListView.swift in Sources */,
