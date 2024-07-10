@@ -93,7 +93,7 @@ struct MovieDetailConainerScreen: View {
         
         Text("Container screen")
             .onAppear{
-                movie = Movie(name: "sp", year: 2013)
+                movie = Movie(name: "sp", year: 2013, genre: .action)
                 context.insert(movie!)
             }
     }

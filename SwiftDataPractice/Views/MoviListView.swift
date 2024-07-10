@@ -26,6 +26,10 @@ struct MoviListView: View {
             _movies = Query(filter: #Predicate<Movie> { movie in
                 movie.reviews.count >= numberOfReviews
             })
+        case .genre(let genre):
+            _movies = Query(filter: #Predicate<Movie> { movie in
+                movie.genreId == genre.id
+            })
         case .none:
             _movies = Query()
         }
@@ -40,6 +44,9 @@ struct MoviListView: View {
                     HStack(alignment: .firstTextBaseline){
                         VStack(alignment: .leading){
                             Text(movie.name)
+                            
+                            Text("\(movie.genre)")
+                            
                             Text("Number of reviews: \(movie.reviewsCount)")
                                 .font(.caption)
                             Text("Number of actors: \(movie.actorsCount)")

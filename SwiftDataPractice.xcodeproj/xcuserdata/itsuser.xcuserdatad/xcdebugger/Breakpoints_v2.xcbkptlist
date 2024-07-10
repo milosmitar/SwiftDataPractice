@@ -3,4 +3,100 @@
    uuid = "CD83C8FD-03B5-4381-BEFD-297970003EA6"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3AB3B5F-128C-4052-AE24-9417D4BB3218"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftDataPractice/Views/MoviListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "init(filterOption:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "166A7246-060E-480E-8D2B-D87EA10C3D87"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftDataPractice/Screens/FilterSelectionScreen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EB5E093F-3D60-4CE7-A83C-4001F3A9578E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftDataPractice/Views/MoviListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "init(filterOption:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EB5E093F-3D60-4CE7-A83C-4001F3A9578E - aa620f40bae8ddc6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftDataPractice.MoviListView.init(filterOption: SwiftDataPractice.FilterOption) -&gt; SwiftDataPractice.MoviListView"
+                  moduleName = "SwiftDataPractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/itsuser/Documents/xCode/SwiftDataPractice/SwiftDataPractice/Views/MoviListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21">
+               </Location>
+               <Location
+                  uuid = "EB5E093F-3D60-4CE7-A83C-4001F3A9578E - aa620f40bae8ddc6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SwiftDataPractice.MoviListView.init(filterOption: SwiftDataPractice.FilterOption) -&gt; SwiftDataPractice.MoviListView"
+                  moduleName = "SwiftDataPractice"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/itsuser/Documents/xCode/SwiftDataPractice/SwiftDataPractice/Views/MoviListView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E1AF6508-D5BF-4FC3-8612-BB44D1A0676D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SwiftDataPractice/Views/MoviListView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "init(filterOption:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -10,6 +10,7 @@ import SwiftUI
 enum FilterOption{
     case title(String)
     case reviewsCount(Int)
+    case genre(Genre)
     case none
 }
 
@@ -20,6 +21,7 @@ struct FilterSelectionScreen: View {
     
     @Binding var filterOption: FilterOption
     @State var numberOfReviews: Int?
+    @State private var genre: Genre = .action
     
     var body: some View {
         Form{
@@ -37,6 +39,18 @@ struct FilterSelectionScreen: View {
                     filterOption = .reviewsCount(numberOfReviews ?? 1)
                     dismiss()
                 }
+            }
+            Section("Filter by genre"){
+                Picker("Genre", selection: $genre) {
+                    ForEach(Genre.allCases){ genre in
+                        
+                        Text(genre.title).tag(genre)
+                        
+                    }
+                }
+            }
+            .onChange(of: genre) {
+                filterOption = .genre(genre)
             }
         }
     }
