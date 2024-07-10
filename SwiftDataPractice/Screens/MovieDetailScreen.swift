@@ -21,7 +21,7 @@ struct MovieDetailScreen: View {
             Button("Update"){
                 guard let year = year else { return }
                 
-                movie.title = title
+                movie.name = title
                 movie.year = year
                 
                 do{
@@ -67,7 +67,7 @@ struct MovieDetailScreen: View {
             }
         }
         .onAppear(){
-            title = movie.title
+            title = movie.name
             year = movie.year
         }
         .sheet(isPresented: $showReviewScreen, content: {
@@ -93,7 +93,7 @@ struct MovieDetailConainerScreen: View {
         
         Text("Container screen")
             .onAppear{
-                movie = Movie(title: "sp", year: 2013)
+                movie = Movie(name: "sp", year: 2013)
                 context.insert(movie!)
             }
     }

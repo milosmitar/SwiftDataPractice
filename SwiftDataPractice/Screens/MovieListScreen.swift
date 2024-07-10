@@ -32,7 +32,7 @@ struct MovieListScreen: View {
     @State private var activeSheet: Sheets?
     
     // gave me all
-    @Query(sort: \Movie.title, order: .forward)
+    @Query(sort: \Movie.name, order: .forward)
 //    @Query(filter: #Predicate<Movie> { movie in
 //        
 ////        movie.title.contains("Spider")
