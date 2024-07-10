@@ -17,31 +17,29 @@ enum FilterOption{
 struct FilterSelectionScreen: View {
     
     @Environment(\.dismiss) private var dismiss
-    @State private var movieTitle: String = ""
     
-    @Binding var filterOption: FilterOption
-    @State var numberOfReviews: Int?
-    @State private var genre: Genre = .action
+    @Binding var filterSelection: FilterSelection
     
     var body: some View {
         Form{
             Section("Filter by title"){
-                TextField("Movie title",text: $movieTitle)
+                TextField("Movie title",text: $filterSelection.movieTitle)
                 Button("Search"){
-                    filterOption = .title(movieTitle)
+                    filterSelection.filterOption = .title(filterSelection.movieTitle)
+                    
                     dismiss()
                 }
             }
             Section("Filter by number of reviews"){
-                TextField("Number of reviews",value: $numberOfReviews, format: .number)
+                TextField("Number of reviews",value: $filterSelection.numberOfReviews, format: .number)
                     .keyboardType(.numberPad)
                 Button("Search"){
-                    filterOption = .reviewsCount(numberOfReviews ?? 1)
+                    filterSelection.filterOption = .reviewsCount(filterSelection.numberOfReviews ?? 1)
                     dismiss()
                 }
             }
             Section("Filter by genre"){
-                Picker("Genre", selection: $genre) {
+                Picker("Genre", selection: $filterSelection.genre) {
                     ForEach(Genre.allCases){ genre in
                         
                         Text(genre.title).tag(genre)
@@ -49,13 +47,20 @@ struct FilterSelectionScreen: View {
                     }
                 }
             }
-            .onChange(of: genre) {
-                filterOption = .genre(genre)
+            .onChange(of: filterSelection.genre) {
+                filterSelection.filterOption = .genre(filterSelection.genre)
             }
         }
     }
 }
 
 #Preview {
-    FilterSelectionScreen(filterOption: .constant(.title("Lego")))
+    FilterSelectionScreen(filterSelection: .constant(FilterSelection()))
+}
+struct FilterSelection {
+    
+    var movieTitle: String = ""
+    var numberOfReviews: Int = 0
+    var genre: Genre = .action
+    var filterOption: FilterOption = .none
 }

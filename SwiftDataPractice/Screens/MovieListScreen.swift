@@ -28,7 +28,6 @@ struct MovieListScreen: View {
     @Environment(\.dismiss) private var dismiss
     @State private var actorName: String = ""
     
-    @State private var filterOption: FilterOption = .none
     @State private var activeSheet: Sheets?
     
     // gave me all
@@ -45,6 +44,7 @@ struct MovieListScreen: View {
     @Query(sort: \Actor.name, order: .forward)
     private var actors: [Actor]
     //    @Environment(\.modelContext) private var context
+    @State var filterSelection: FilterSelection = FilterSelection()
     
     
     private func saveActor(){
@@ -64,7 +64,12 @@ struct MovieListScreen: View {
                     activeSheet = .showFilter
                 }
             }
-            MoviListView(filterOption: filterOption)
+            
+            Button("Clear Filters"){
+                filterSelection = FilterSelection()
+            }
+            
+            MoviListView(filterOption: filterSelection.filterOption)
             
             Text("Actors")
                 .font(.largeTitle)
@@ -102,7 +107,7 @@ struct MovieListScreen: View {
                     
                 }
             case .showFilter:
-                FilterSelectionScreen(filterOption: $filterOption)
+                FilterSelectionScreen(filterSelection: $filterSelection)
             }
         }
     }

@@ -30,8 +30,8 @@
             filePath = "SwiftDataPractice/Screens/FilterSelectionScreen.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -50,36 +50,6 @@
             endingLineNumber = "20"
             landmarkName = "init(filterOption:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "EB5E093F-3D60-4CE7-A83C-4001F3A9578E - aa620f40bae8ddc6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftDataPractice.MoviListView.init(filterOption: SwiftDataPractice.FilterOption) -&gt; SwiftDataPractice.MoviListView"
-                  moduleName = "SwiftDataPractice"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/itsuser/Documents/xCode/SwiftDataPractice/SwiftDataPractice/Views/MoviListView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21">
-               </Location>
-               <Location
-                  uuid = "EB5E093F-3D60-4CE7-A83C-4001F3A9578E - aa620f40bae8ddc6"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SwiftDataPractice.MoviListView.init(filterOption: SwiftDataPractice.FilterOption) -&gt; SwiftDataPractice.MoviListView"
-                  moduleName = "SwiftDataPractice"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/itsuser/Documents/xCode/SwiftDataPractice/SwiftDataPractice/Views/MoviListView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
